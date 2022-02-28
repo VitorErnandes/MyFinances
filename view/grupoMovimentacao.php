@@ -1,3 +1,22 @@
+<?php
+require_once '../controller/GrupoMovimentacao.php';
+
+$GrupoMovimentacao = new GrupoMovimentacaoController();
+$arrayGrupos = $GrupoMovimentacao->listarGrupoMovimentacaoCTRL();
+
+var_dump($arrayGrupos);
+/*
+foreach($arrayGrupos as $arrayGrupo){
+        $resultados .= '<tr>
+                            <td>'.$arrayGrupo->GrupoMovimentacaoID.'</td>
+                            <td>'.$arrayGrupo->Nome.'</td>
+                            <td>'.$arrayGrupo->Descricao.'</td>
+                            <td>'.$arrayGrupo->UsuarioID.'</td>
+                        </tr>';
+    }
+    */
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -60,6 +79,10 @@
     <!--Container Main start-->
     <div class="height-100">
         <h4 class="">Grupo de Gastos</h4>
+
+        <?php
+        $resultados;
+        ?>
     </div>
 
 </body>
